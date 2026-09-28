@@ -1,0 +1,48 @@
+name: Bug report
+description: Something in BeePot doesn't work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make BeePot better. Please don't paste code, secrets or anything private
+        from your projects — this page is public.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what did BeePot do instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we see it too?
+      description: Steps to get there, if you know them.
+      placeholder: |
+        1. Open a project…
+        2. Click…
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Bee
+        - Beekeeper
+        - Not sure
+  - type: input
+    id: version
+    attributes:
+      label: BeePot version
+      description: BeePot Beta → About BeePot Beta. Filled in when you use Help → Report a Bug… in the app.
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots or a screen recording help a lot. You can drag them in here.

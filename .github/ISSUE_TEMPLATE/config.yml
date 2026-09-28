@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💡 Idea or wish
+    url: https://github.com/MateeDevs/BeePot/discussions/new?category=ideas
+    about: Suggest something BeePot should do — others can vote on it.
+  - name: 🙏 Question
+    url: https://github.com/MateeDevs/BeePot/discussions/new?category=q-a
+    about: Ask how something works.
