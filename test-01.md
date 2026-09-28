@@ -107,11 +107,6 @@ Pick one in the first-run setup and switch any time in Settings.
 3. Open BeePot. A short setup walks you through how you want to work, developer tools, GitHub
    sign-in and your first project.
 
-> [!IMPORTANT]
-> The first time, macOS may say it can’t check BeePot for malicious software. Open
-> **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to BeePot.
-> You only need to do this once.
-
 ## Updates
 
 BeePot updates itself. It downloads new versions in the background and installs them when you quit
@@ -153,13 +148,6 @@ No. In <b>Bee</b> mode BeePot speaks plain words: save points, Sync, backups. Sw
 <br>
 BeePot sees Claude Code, Codex, Pi, Cursor Agent, Gemini CLI, OpenCode, Aider, Amp, GitHub Copilot,
 Goose and Zed. AI commit messages and summaries use Claude Code, Codex or Cursor.
-</details>
-
-<details>
-<summary><b>Why does macOS warn me the first time?</b></summary>
-<br>
-BeePot isn’t notarized by Apple yet. Click <b>Open Anyway</b> once (see <a href="#install">Install</a>);
-updates after that install without asking.
 </details>
 
 <details>
