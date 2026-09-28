@@ -4,10 +4,11 @@
 </picture>
 
 <p align="center">
-  <a href="https://github.com/MateeDevs/BeePot/releases/latest/download/BeePot.zip"><img src="https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fgithub.com%2FMateeDevs%2FBeePot%2Freleases%2Flatest%2Fdownload%2Fappcast.xml&query=%2F%2F%2A%5Blocal-name%28%29%3D%27shortVersionString%27%5D&label=Download%20for%20Mac&prefix=v&style=for-the-badge&logo=apple&logoColor=white&color=E08A10&labelColor=1F1606" height="40" alt="Download BeePot for Mac"></a>
+  <a href="https://github.com/MateeDevs/BeePot/releases/latest/download/BeePot.zip"><img src=".github/assets/download.svg" height="52" alt="Download BeePot for Mac"></a>
 </p>
 
 <p align="center">
+  <a href="https://github.com/MateeDevs/BeePot/releases"><img src="https://img.shields.io/github/v/release/MateeDevs/BeePot?label=version&color=F9B83A&labelColor=2B2112" alt="Latest version"></a>
   <a href="https://github.com/MateeDevs/BeePot/releases"><img src="https://img.shields.io/github/release-date/MateeDevs/BeePot?label=released&color=F9B83A&labelColor=2B2112" alt="Release date"></a>
   <img src="https://img.shields.io/badge/macOS-26%2B-F9B83A?logo=apple&logoColor=white&labelColor=2B2112" alt="macOS 26 or later">
   <img src="https://img.shields.io/badge/Apple%20silicon%20%26%20Intel-universal-F9B83A?labelColor=2B2112" alt="Apple silicon and Intel">
