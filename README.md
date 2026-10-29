@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.svg">
-  <img src=".github/assets/banner-light.svg" width="100%" alt="BeePot — the agent-first git client, for beginners and pros alike">
+  <img src=".github/assets/banner-light.svg" width="100%" alt="BeePot. Review your agents’ work across projects.">
 </picture>
 
 <p align="center">
@@ -9,162 +9,130 @@
 
 <p align="center">
   <a href="https://github.com/MateeDevs/BeePot/releases"><img src="https://img.shields.io/github/v/release/MateeDevs/BeePot?label=version&color=F9B83A&labelColor=2B2112" alt="Latest version"></a>
-  <a href="https://github.com/MateeDevs/BeePot/releases"><img src="https://img.shields.io/github/release-date/MateeDevs/BeePot?label=released&color=F9B83A&labelColor=2B2112" alt="Release date"></a>
   <img src="https://img.shields.io/badge/macOS-26%2B-F9B83A?logo=apple&logoColor=white&labelColor=2B2112" alt="macOS 26 or later">
   <img src="https://img.shields.io/badge/Apple%20silicon%20%26%20Intel-universal-F9B83A?labelColor=2B2112" alt="Apple silicon and Intel">
-  <img src="https://img.shields.io/badge/updates-automatic%20%26%20signed-F9B83A?labelColor=2B2112" alt="Automatic, signed updates">
 </p>
 
-<!-- Screenshot: add .github/assets/screenshot.png (the main window, ~2400 px wide) and uncomment.
+BeePot is a Mac app for reviewing work across projects built with coding agents. See which agent
+is working where, inspect changed files, and check what Sync will upload. Choose Bee for
+plain-language controls or Beekeeper for staging, commits and branches.
+
 <p align="center">
-  <img src=".github/assets/screenshot.png" width="100%" alt="BeePot showing projects in the sidebar and the changes an agent made">
+  <img src=".github/assets/screenshot.jpg" width="100%" alt="Illustration of Bee mode showing project activity and a changed document"><br>
+  <sub>Bee mode interface illustration. Example projects.</sub>
 </p>
--->
 
-Claude Code, Codex, Cursor and friends change files in many projects at once. **BeePot** shows you
-what they changed, which project needs you right now, and keeps versions of your work so nothing
-gets lost. Projects are sorted by the latest activity, so the one waiting for you is always on top.
+## Review work across projects
 
-## Two ways to work
+Keep your projects in one sidebar, grouped by agent activity and work that needs attention.
+See when Claude Code, Codex, Cursor or another agent is working or waiting for an answer.
+BeePot can notify you when an agent finishes or needs you, and offers projects it finds from
+local agent activity.
 
-|  | 🐝 **Bee** | 🧑‍🌾 **Beekeeper** |
+Open a project to inspect changed files and read a summary. Markdown renders as a document;
+images appear as pictures. Enable UI previews to compare supported SwiftUI and Jetpack Compose
+screens using your project's build tools. Web previews open the page in BeePot; explicitly
+connected development servers show a live page rather than a captured before-and-after comparison.
+
+## Save versions and check what gets shared
+
+In Bee, read the suggested description or write your own, then save a version. Sync shows its
+planned steps before saving changes, bringing in remote updates and uploading your versions.
+Put Online can create a private GitHub repository. Website deployment stays with your hosting service.
+
+Bee warns about files such as `.env` and private keys before saving, so you can choose what stays
+on this Mac. AI descriptions and commit messages use an installed Claude Code, Codex, Cursor,
+OpenCode or Pi CLI through your own provider account.
+
+## Recover earlier work
+
+Automatic backups are on by default. BeePot takes recovery points when an agent starts, before
+Sync, before switching drafts and every 15 minutes while your work changes. Periodic backups
+pause in Low Power Mode. Ignored files and large untracked files are excluded.
+
+Restore a recovery point to return the project to that earlier state. BeePot backs up the work
+you are replacing first. Recovery points stay on this Mac, are thinned after a day and expire
+after 14 days. Saved versions remain in Git history.
+
+## Choose your controls
+
+| | Bee | Beekeeper |
 | --- | --- | --- |
-| **For** | Designers, writers, PMs — anyone building with an AI agent | Developers who know git |
-| **Words** | Plain words, no git jargon | The full git vocabulary |
-| **Saving** | Save points and one **Sync** button that shows what goes online first | Stage, commit, push, pull, branches, stashes |
+| Reviewing | Grouped changes and plain-language summaries | Staged and unstaged files with code diffs |
+| Saving and sharing | Save versions and preview Sync | Stage, commit, push, pull and amend |
+| Working on alternatives | Drafts | Branches, linked worktrees and stashes |
 
-Pick one in the first-run setup and switch any time in Settings.
-
-## What it does
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src=".github/assets/feature-projects.svg" width="44" alt=""><br>
-      <b>All your projects on one screen</b><br>
-      Sorted by what needs you: an agent waiting for input, work ready to upload, conflicts, reviews.
-    </td>
-    <td width="50%" valign="top">
-      <img src=".github/assets/feature-agents.svg" width="44" alt=""><br>
-      <b>Knows your coding agents</b><br>
-      Claude Code, Codex, Cursor, Gemini CLI, Pi, OpenCode, Aider and more: which one works where, and whether it’s busy, done or needs you.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src=".github/assets/feature-changes.svg" width="44" alt=""><br>
-      <b>See what changed</b><br>
-      Every file and every line, with a short summary in plain words.
-    </td>
-    <td valign="top">
-      <img src=".github/assets/feature-previews.svg" width="44" alt=""><br>
-      <b>Previews, not just diffs</b><br>
-      Markdown, images, web pages and SwiftUI / Jetpack Compose screens, before and after the change.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src=".github/assets/feature-safety.svg" width="44" alt=""><br>
-      <b>A safety net</b><br>
-      Automatic backups every 15 minutes, when an agent starts and before every Sync. Go back any time.
-    </td>
-    <td valign="top">
-      <img src=".github/assets/feature-ai.svg" width="44" alt=""><br>
-      <b>AI commit messages</b><br>
-      Written by the agent you already have, with your own account. No extra API key.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src=".github/assets/feature-discover.svg" width="44" alt=""><br>
-      <b>Finds your projects</b><br>
-      Reads your agents’ history on this Mac and offers the projects they worked in.
-    </td>
-    <td valign="top">
-      <img src=".github/assets/feature-reviews.svg" width="44" alt=""><br>
-      <b>Reviews</b><br>
-      GitHub pull requests sent to you, right next to your own work.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src=".github/assets/feature-notifications.svg" width="44" alt=""><br>
-      <b>Notifications</b><br>
-      When an agent needs you or finishes, when a review arrives, when a new version is ready.
-    </td>
-    <td valign="top">
-      <img src=".github/assets/feature-fast.svg" width="44" alt=""><br>
-      <b>Keyboard first</b><br>
-      <kbd>⌘</kbd> <kbd>K</kbd> to jump anywhere, <kbd>⇧</kbd> <kbd>⇧</kbd> to search a project.
-    </td>
-  </tr>
-</table>
+Choose a mode in setup and switch in Settings. Both modes show agent activity and support
+automatic backups. Press **⌘K** for projects and actions, or **Shift twice** to search files and
+text in the current project.
 
 ## Install
 
 1. Download **[BeePot.zip](https://github.com/MateeDevs/BeePot/releases/latest/download/BeePot.zip)**.
-2. Unzip it and move **BeePot** to your **Applications** folder.
-3. Open BeePot. A short setup walks you through how you want to work, developer tools, GitHub
-   sign-in and your first project.
+2. Unzip it and move **BeePot** to **Applications**.
+3. Open BeePot, choose how you work, then add a project or pick one found from your agents' activity.
 
-## Updates
+Requires **macOS 26 Tahoe or later**, on Apple silicon or Intel. GitHub sign-in and any missing
+developer tools are handled when the relevant feature needs them.
 
-BeePot updates itself. It downloads new versions in the background and installs them when you quit
-it, or right away from the sidebar with **Restart**. You can also choose
-**BeePot → Check for Updates…**, and **Help → What’s New in BeePot…** shows what changed.
+Updates download automatically by default and install when you quit, or when you choose
+**Restart** after a download. Updates are signed and verified. Preferences are in Settings;
+**Check for Updates…** is in the BeePot menu.
 
-> [!NOTE]
-> Every update is signed, and BeePot installs only updates signed by us.
-
-All versions and their notes: **[Releases](https://github.com/MateeDevs/BeePot/releases)**.
+See [Releases](https://github.com/MateeDevs/BeePot/releases) for versions and release notes.
 
 ## Privacy
 
-- 🏠 BeePot runs on your Mac. No analytics, no tracking, no BeePot account.
-- 🐙 It talks to **GitHub** only for what you ask it to (sign-in, cloning, syncing, reviews) and to
-  check this page for updates.
-- 🤖 AI features run through the coding agent installed on your Mac (Claude Code, Codex or Cursor),
-  under your own account with that provider.
-- 🔍 Found projects are read from your agents’ session history on this Mac. Nothing is uploaded.
+Your project list, settings and recovery points are stored locally. Project discovery reads local
+agent session information to find folders; that discovery data stays on your Mac.
+
+Git connects to your configured remotes. GitHub features communicate with GitHub. Background fetch
+checks remotes every five minutes by default, and BeePot automatically checks for application
+updates. These preferences can be changed in Settings. Projects on a server use SSH.
+
+AI summaries and commit messages pass the change content needed for the request to your selected
+coding agent. Its provider processes the request through your account, under that provider's data
+settings and policies. Automatic message preparation can be turned off in Settings.
+
+BeePot does not include analytics or tracking. A BeePot account is not required.
 
 ## FAQ
 
 <details>
 <summary><b>Does BeePot change my files?</b></summary>
 <br>
-Only when you ask it to: committing, syncing, restoring a backup. Previews render from BeePot’s own
-copy of the project, so nothing a preview build writes lands in your folder.
-</details>
-
-<details>
-<summary><b>Do I need to know git?</b></summary>
-<br>
-No. In <b>Bee</b> mode BeePot speaks plain words: save points, Sync, backups. Switch to
-<b>Beekeeper</b> when you want every git control.
+Saving, syncing, restoring and the built-in editor can change your project. Preview builds run
+from BeePot's separate copy. Automatic recovery points are stored locally and do not upload your work.
 </details>
 
 <details>
 <summary><b>Which coding agents does it work with?</b></summary>
 <br>
-BeePot sees Claude Code, Codex, Pi, Cursor Agent, Gemini CLI, OpenCode, Aider, Amp, GitHub Copilot,
-Goose and Zed. AI commit messages and summaries use Claude Code, Codex or Cursor.
+BeePot detects Claude Code, Codex, Pi, Cursor Agent, Gemini CLI, OpenCode, Aider, Amp, GitHub Copilot,
+Goose and Zed. AI summaries and commit messages use Claude Code, Codex, Cursor, OpenCode or Pi.
+</details>
+
+<details>
+<summary><b>Can I restore only one agent's edits?</b></summary>
+<br>
+The agent undo action restores the project to the recovery point from before that agent started.
+It does not separate overlapping edits made by several people or agents. You review the affected
+files before restoring, and BeePot keeps a backup of the current work.
 </details>
 
 <details>
 <summary><b>How do I uninstall it?</b></summary>
 <br>
-Quit BeePot and move it from <b>Applications</b> to the Trash. Your projects stay exactly where they
-are. BeePot’s own settings and project list live in <code>~/Library/Application Support/BeePot</code>.
+Quit BeePot and move it from <b>Applications</b> to the Trash. Your project folders stay in place.
+BeePot's settings and project list live in <code>~/Library/Application Support/BeePot</code>.
 </details>
 
 ## Feedback
 
-BeePot is in beta and moves fast. Found a bug? **[Report it](https://github.com/MateeDevs/BeePot/issues/new/choose)**
-(in the app: *Help → Report a Bug…*). Missing something or have a question? Start a
-**[discussion](https://github.com/MateeDevs/BeePot/discussions)** (*Help → Send Feedback…*).
-Anything private: **[info@matee.cz](mailto:info@matee.cz)**.
-
-<br>
+BeePot is in beta. [Report a bug](https://github.com/MateeDevs/BeePot/issues/new/choose) or
+[start a discussion](https://github.com/MateeDevs/BeePot/discussions) for ideas and questions.
+Both are also available in the app's Help menu. For private feedback, email
+[info@matee.cz](mailto:info@matee.cz).
 
 <p align="center">
   <img src=".github/assets/icon.png" width="48" alt=""><br>
